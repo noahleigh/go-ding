@@ -94,3 +94,16 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
+
+/**
+ * Socket listeners
+ */
+var counter = 0
+
+ io.on('connection', function(socket){
+  socket.on('clicked', function(data){
+    counter = counter + 1
+    io.emit('increment-counter', counter);
+    console.log('Counter: '+counter);
+  });
+});
