@@ -103,6 +103,7 @@ var counter = 0
  io.on('connection', function(socket){
   socket.on('clicked', function(data){
     counter = counter + 1
+    socket.broadcast.emit('play-ding');
     io.emit('increment-counter', counter);
     console.log('Counter: '+counter);
   });
