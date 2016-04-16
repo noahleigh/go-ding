@@ -16,15 +16,17 @@ $('#ding-button').click(function(){
     return false;
 });
 
-socket.on('increment-counter', function(counter){
+socket.on('update-counter', function(counter){
     // $('#counter').text(counter);
     $('#progress-bar').text(counter+'%')
     $('#progress-bar').css('width', counter+'%');
     $('#progress-bar').attr('aria-valuenow', counter);
     if (counter == 100) {
         $('#progress-bar').addClass('progress-bar-success');
+        $('#title').addClass('animated tada');
     } else {
         $('#progress-bar').removeClass('progress-bar-success');
+        $('#title').removeClass('animated tada');
     }
 });
 
