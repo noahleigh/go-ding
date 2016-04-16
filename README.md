@@ -8,3 +8,5 @@ npm install
 ```sh
 npm start
 ```
+# Downloads
+[Latest Release](https://github.com/noahleigh/go-ding/releases/latest)
