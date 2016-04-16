@@ -23,9 +23,11 @@ socket.on('update-counter', function(counter){
     $('#progress-bar').attr('aria-valuenow', counter);
     if (counter == 100) {
         $('#progress-bar').addClass('progress-bar-success');
+        $('#title').text('SUCCESS!');
         $('#title').addClass('animated tada');
     } else {
         $('#progress-bar').removeClass('progress-bar-success');
+        $('#title').text('Get Ready');
         $('#title').removeClass('animated tada');
     }
 });
