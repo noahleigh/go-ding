@@ -1,8 +1,13 @@
 {
   "name": "go-ding",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Social button pressing.",
+  "author": "noahleigh",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/noahleigh/go-ding.git"
+  },
   "scripts": {
     "start": "node ./bin/www"
   },
