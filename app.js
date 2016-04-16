@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 // Set app to production mode.
-// app.set('env', 'production');
+app.set('env', 'production');
 
 app.use('/', routes);
 app.use('/users', users);
