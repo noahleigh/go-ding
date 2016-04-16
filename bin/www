@@ -99,12 +99,16 @@ function onListening() {
  * Socket listeners
  */
 var counter = 0
+var increment = 5
+var clients = new Array();
 
- io.on('connection', function(socket){
+io.on('connection', function(socket){
+  io.sockets.connected[socket.id].emit('increment-counter', counter);
+  console.log('new connection')
   socket.on('clicked', function(data){
-    counter = counter + 1
+    counter = counter >= 100 ? 0 : counter + increment;
     socket.broadcast.emit('play-ding');
-    io.emit('increment-counter', counter);
+    socket.emit('increment-counter', counter);
     console.log('Counter: '+counter);
   });
 });
