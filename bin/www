@@ -28,6 +28,7 @@ var server = http.createServer(app);
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
+console.log(`Now listening on http://localhost:${port}`);
 
 /**
  * Start up socket.io
