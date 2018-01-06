@@ -28,7 +28,6 @@ var server = http.createServer(app);
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
-console.log(`Now listening on http://localhost:${port}`);
 
 /**
  * Start up socket.io
@@ -105,11 +104,11 @@ var clients = new Array();
 
 io.on('connection', function(socket){
   io.sockets.connected[socket.id].emit('update-counter', counter);
-  console.log('new connection')
+  debug(`New connection: ${socket.id}`)
   socket.on('clicked', function(data){
     counter = counter >= 100 ? 0 : counter + increment;
     socket.broadcast.emit('play-ding');
     io.emit('update-counter', counter);
-    console.log('Counter: '+counter);
+    debug('Counter: '+counter);
   });
 });
