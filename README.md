@@ -1,6 +1,6 @@
 # Build
 ```sh
-git clone https://github.com/noahleigh/go-ding.git
+git clone https://github.com/noelleleigh/go-ding.git
 cd go-ding
 npm install
 ```
