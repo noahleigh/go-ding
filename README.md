@@ -10,4 +10,4 @@ npm start
 ```
 Visit [http://localhost:3000](http://localhost:3000)
 # Downloads
-[Latest Release](https://github.com/noahleigh/go-ding/releases/latest)
+[Latest Release](https://github.com/noelleleigh/go-ding/releases/latest)
